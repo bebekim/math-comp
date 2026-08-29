@@ -67,7 +67,7 @@ A browser tab opens on JupyterLab, rooted at this repo. In the file browser
 on the left, open the lesson's starter notebook, e.g.:
 
 ```
-lessons/math/m01-algebraic-inequalities-induction/01-mathematical-induction/starter/notebook.ipynb
+lessons/math/m01-algebraic-inequalities-induction/starter/notebook.ipynb
 ```
 
 Using the notebook:
@@ -87,8 +87,9 @@ Using the notebook:
 
 ## Weekly workflow
 
-Lesson notebooks live here, under `lessons/<track>/<module>/<exercise>/`
-(e.g. `lessons/cs/cs01-invariants/01-chocolate/`), each with
+Lesson notebooks live here, under `lessons/<track>/<module>/` (a module with
+several exercises nests one level deeper, e.g.
+`lessons/cs/cs01-invariants/01-chocolate/`), each with
 a `starter/notebook.ipynb` (has `TRY THIS` gaps, runs cleanly even unfinished)
 and a `target/notebook.ipynb` (the finished reference).
 
