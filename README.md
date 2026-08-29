@@ -2,12 +2,13 @@
 
 Luke's runtime for the math and computer-science curriculum on
 [bebekim.github.io](https://bebekim.github.io/curriculum/) — Jupyter + sympy +
-matplotlib, with every dependency pinned in `requirements.txt`. Same shape as
+matplotlib, with dependencies managed by [uv](https://docs.astral.sh/uv/)
+(`pyproject.toml` + `uv.lock`). Same shape as
 `learn-to-program_ruby-edition` + `dragonruby-gtk-macos`, adapted for math:
 the blog holds the lessons, `math-comp` is where they actually get run.
 
 ```sh
-make install   # creates .venv, installs sympy/matplotlib/jupyter, registers the kernel
+make install   # uv sync, then registers the "math-comp (sympy)" Jupyter kernel
 make lab       # launches Jupyter Lab, rooted at workspace/
 ```
 
