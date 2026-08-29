@@ -5,41 +5,28 @@ Luke's runtime for the math and computer-science curriculum on
 matplotlib, with dependencies managed by [uv](https://docs.astral.sh/uv/)
 (`pyproject.toml` + `uv.lock`). Same shape as
 `learn-to-program_ruby-edition` + `dragonruby-gtk-macos`, adapted for math:
-the blog holds the lessons, `math-comp` is where they actually get run.
+the blog holds the reading, `math-comp` holds the notebooks and is where they
+actually get run.
 
 ```sh
 make install   # uv sync, then registers the "math-comp (sympy)" Jupyter kernel
-make lab       # launches Jupyter Lab, rooted at workspace/
+make lab       # launches Jupyter Lab, rooted at the repo
 ```
 
 ## Weekly workflow
 
-Lessons live in the blog repo, under `lessons/<track>/<module>/<exercise>/`
+Lesson notebooks live here, under `lessons/<track>/<module>/<exercise>/`
 (e.g. `lessons/cs/cs01-invariants/01-chocolate/`), each with
 a `starter/notebook.ipynb` (has `TRY THIS` gaps, runs cleanly even unfinished)
 and a `target/notebook.ipynb` (the finished reference).
 
-```sh
-spwn sync --target workspace --source /Users/marcus.kim/Documents/blog/lessons/cs/cs01-invariants/01-chocolate/starter
-```
+1. Read the lesson on the blog first (links are in each lesson's README).
+2. `make lab`, then open the lesson's `starter/notebook.ipynb`.
+3. Run every cell from the top, in order, even before you've filled anything
+   in — it's built to run cleanly either way.
+4. Fill in the `TRY THIS` gaps. Commit your progress as you go.
 
-Then:
-
-```sh
-make lab
-```
-
-and open the synced notebook from `workspace/`.
-
-When a session is done:
-
-```sh
-spwn save -m "cs01.01: confirmed the chocolate invariant"
-spwn upload
-```
-
-`spwn rollback --into workspace` undoes the most recent sync if you need to
-switch back to something.
+`workspace/` is scratch space for anything that isn't a lesson; it's gitignored.
 
 ## Notebook lesson shape
 

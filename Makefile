@@ -11,7 +11,7 @@ kernel:
 	$(PYTHON) -m ipykernel install --user --name math-comp --display-name "math-comp (sympy)"
 
 lab:
-	$(VENV)/bin/jupyter lab --notebook-dir=workspace
+	$(VENV)/bin/jupyter lab --notebook-dir=.
 
 clean:
 	rm -rf $(VENV)
