@@ -93,6 +93,24 @@ several exercises nests one level deeper, e.g.
 a `starter/notebook.ipynb` (has `TRY THIS` gaps, runs cleanly even unfinished)
 and a `target/notebook.ipynb` (the finished reference).
 
+Current layout:
+
+```
+lessons/
+  math/
+    m01-algebraic-inequalities-induction/
+      starter/notebook.ipynb   # lesson 1: mathematical induction
+      target/notebook.ipynb
+  cs/
+    cs01-invariants/           # four exercises, so one level deeper
+      01-chocolate/
+        starter/notebook.ipynb
+        target/notebook.ipynb
+```
+
+Math lessons sit directly at the module level; cs01 nests per exercise
+because the module has several.
+
 1. Read the lesson on the blog first (links are in each lesson's README).
 2. `uv run jupyter lab`, then open the lesson's `starter/notebook.ipynb`.
 3. Run every cell from the top, in order.
