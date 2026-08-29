@@ -15,4 +15,4 @@ lab:
 
 clean:
 	rm -rf $(VENV)
-	rm -rf workspace/.ipynb_checkpoints
+	find . -name .ipynb_checkpoints -type d -prune -exec rm -rf {} +

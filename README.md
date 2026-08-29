@@ -26,8 +26,6 @@ and a `target/notebook.ipynb` (the finished reference).
    in — it's built to run cleanly either way.
 4. Fill in the `TRY THIS` gaps. Commit your progress as you go.
 
-`workspace/` is scratch space for anything that isn't a lesson; it's gitignored.
-
 ## Notebook lesson shape
 
 Every lesson notebook: work markdown-first, TRY THIS gaps use `None` as the

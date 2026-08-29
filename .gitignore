@@ -2,5 +2,3 @@
 __pycache__/
 .ipynb_checkpoints/
 *.pyc
-workspace/*
-!workspace/.gitkeep
