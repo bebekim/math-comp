@@ -8,54 +8,24 @@ matplotlib, with dependencies managed by [uv](https://docs.astral.sh/uv/)
 the blog holds the reading, `math-comp` holds the notebooks and is where they
 actually get run.
 
-## Setup (Windows, macOS, Linux)
+## Repository and Setup
 
-You need two things installed first: **Git** and **uv**.
+See [INSTRUCTION.md](INSTRUCTION.md) for first-time setup, JupyterLab launch
+commands, notebook workflow, saving work, and teacher verification across
+computers.
 
-**1. Install Git.**
-
-- Windows: `winget install Git.Git` in PowerShell, or download from
-  [git-scm.com](https://git-scm.com/downloads/win)
-- macOS: `xcode-select --install`, or `brew install git`
-- Linux: your package manager (e.g. `sudo apt install git`)
-
-**2. Install uv.** uv will also install Python for you — no separate
-Python download needed.
-
-- Windows (PowerShell):
-
-  ```powershell
-  powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-  ```
-
-- macOS/Linux:
-
-  ```sh
-  curl -LsSf https://astral.sh/uv/install.sh | sh
-  ```
-
-Close and reopen the terminal afterward so `uv` is on your PATH.
-
-**3. Clone this repo and set it up.**
+Short version:
 
 ```sh
 git clone https://github.com/bebekim/math-comp
 cd math-comp
 uv sync
-```
-
-`uv sync` creates a `.venv` and installs exactly the pinned versions of
-sympy, numpy, matplotlib, and Jupyter from `uv.lock`. Works the same on
-every platform.
-
-**4. Register the Jupyter kernel (once).**
-
-```sh
 uv run python -m ipykernel install --user --name math-comp --display-name "math-comp (sympy)"
+uv run jupyter lab
 ```
 
-The lesson notebooks look for the kernel named `math-comp`; this makes it
-available.
+`uv sync` creates a `.venv` and installs exactly the pinned versions of sympy,
+numpy, matplotlib, and Jupyter from `uv.lock`.
 
 ## Running a lesson
 
@@ -82,8 +52,8 @@ Using the notebook:
 - If the kernel picker asks, choose **math-comp (sympy)**.
 - `Ctrl+C` twice in the terminal stops Jupyter when you're done.
 
-(On macOS/Linux, `make install` and `make lab` are shortcuts for the same
-`uv` commands.)
+On macOS/Linux, `make install` and `make lab` are shortcuts for the same `uv`
+commands.
 
 ## Weekly workflow
 
